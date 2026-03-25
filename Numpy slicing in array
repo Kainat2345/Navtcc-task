@@ -1,0 +1,65 @@
+import numpy as np
+
+# Create a 1D array
+arr1 = np.array([10, 20, 30, 40, 50, 60, 70])
+
+print("Original 1D Array:")
+print(arr1)
+
+# Basic slicing
+print("\nSlice from index 1 to 4:")
+print(arr1[1:5])   # 20, 30, 40, 50
+
+# Slice with step
+print("\nSlice with step 2:")
+print(arr1[::2])   # 10, 30, 50, 70
+
+#  Negative slicing
+print("\nReverse array:")
+print(arr1[::-1])  # reverse
+
+# --------------------------------------------------
+
+# Create a 2D array
+arr2 = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+print("\nOriginal 2D Array:")
+print(arr2)
+
+# Row slicing
+print("\nFirst two rows:")
+print(arr2[0:2, :])
+
+#  Column slicing
+print("\nSecond column:")
+print(arr2[:, 1])
+
+# Sub-matrix slicing
+print("\nSub-matrix (first 2 rows, first 2 columns):")
+print(arr2[0:2, 0:2])
+
+#  Single element
+print("\nElement at row 2, column 3:")
+print(arr2[1, 2])   # 6
+
+# --------------------------------------------------
+
+# Create a 3D array
+arr3 = np.array([
+    [[1, 2], [3, 4]],
+    [[5, 6], [7, 8]]
+])
+
+print("\nOriginal 3D Array:")
+print(arr3)
+
+#  Slice from 3D array
+print("\nAccess first block:")
+print(arr3[0])
+
+print("\nAccess specific element:")
+print(arr3[1, 0, 1])  # 6
