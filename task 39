@@ -1,0 +1,23 @@
+import numpy as np
+
+print("=== NUMPY ARRAY SORT EXAMPLES ===")
+
+# 1) Sort a 1D numeric array
+arr1 = np.array([3, 2, 0, 1])
+sorted1 = np.sort(arr1)        # sort returns a new sorted array
+print("Sorted 1D numeric:", sorted1)
+
+# 2) Sort an array of strings alphabetically
+arr_str = np.array(['banana', 'cherry', 'apple'])
+sorted_str = np.sort(arr_str)
+print("Sorted strings:", sorted_str)
+
+# 3) Sort a boolean array (False < True)
+arr_bool = np.array([True, False, True])
+sorted_bool = np.sort(arr_bool)
+print("Sorted boolean:", sorted_bool)
+
+# 4) Sort a 2D array (sorts each row)
+arr2d = np.array([[3, 2, 4], [5, 0, 1]])
+sorted2d = np.sort(arr2d)
+print("Sorted 2D array (each row sorted):\n", sorted2d)
