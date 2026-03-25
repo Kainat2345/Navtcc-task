@@ -1,0 +1,37 @@
+import numpy as np
+
+print("===== NUMPY ARRAY JOIN / CONCATENATION =====\n")
+
+# 1. Concatenate two 1D arrays
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+joined1d = np.concatenate((arr1, arr2))
+print("1D concatenate:", joined1d)
+
+# 2. Concatenate two 2D arrays along rows (axis=0)
+a2d_1 = np.array([[1, 2], [3, 4]])
+a2d_2 = np.array([[5, 6], [7, 8]])
+joined2d_axis0 = np.concatenate((a2d_1, a2d_2), axis=0)
+print("\n2D concatenate axis 0:\n", joined2d_axis0)
+
+# 3. Concatenate 2D arrays along columns (axis=1)
+joined2d_axis1 = np.concatenate((a2d_1, a2d_2), axis=1)
+print("\n2D concatenate axis 1:\n", joined2d_axis1)
+
+# 4. Stack 1D arrays along a new axis
+stacked_new_axis = np.stack((arr1, arr2), axis=1)
+print("\nStacked along new axis:\n", stacked_new_axis)
+
+# 5. Horizontal stack (same as concatenate on axis=0 for 1D)
+hstacked = np.hstack((arr1, arr2))
+print("\nhstack:", hstacked)
+
+# 6. Vertical stack (turn 1D arrays into 2D rows)
+vstacked = np.vstack((arr1, arr2))
+print("\nvstack:\n", vstacked)
+
+# 7. Depth stack (along the third dimension)
+dstacked = np.dstack((arr1, arr2))
+print("\ndstack:\n", dstacked)
+
+print("\n===== END =====")
