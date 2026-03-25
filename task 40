@@ -1,0 +1,37 @@
+import numpy as np
+
+print("===== NUMPY RANDOM EXAMPLES =====\n")
+
+# 1) Random integer between 0 and 100
+rnd_int = np.random.randint(100)
+print("Random integer (0 to 99):", rnd_int)
+
+# 2) Random float between 0 and 1
+rnd_float = np.random.rand()
+print("Random float (0 to 1):", rnd_float)
+
+# 3) Random 1‑D array of 5 integers
+rnd_arr1d = np.random.randint(100, size=5)
+print("Random 1D integer array:", rnd_arr1d)
+
+# 4) Random 2‑D array of integers (3 rows × 5 columns)
+rnd_arr2d = np.random.randint(100, size=(3, 5))
+print("\nRandom 2D integer array (3×5):\n", rnd_arr2d)
+
+# 5) Random 1‑D array of 5 floats
+rnd_floats1d = np.random.rand(5)
+print("\nRandom 1D float array:", rnd_floats1d)
+
+# 6) Random 2‑D float array (3 rows × 5 columns)
+rnd_floats2d = np.random.rand(3, 5)
+print("\nRandom 2D float array (3×5):\n", rnd_floats2d)
+
+# 7) Random choice from a list of values
+choices = np.random.choice([3, 5, 7, 9])
+print("\nRandom choice from [3,5,7,9]:", choices)
+
+# 8) Random 2‑D array of choices
+choice_arr = np.random.choice([3, 5, 7, 9], size=(3, 5))
+print("\nRandom choice array (3×5):\n", choice_arr)
+
+print("\n===== END OF RANDOM DEMO =====")
