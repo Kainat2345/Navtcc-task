@@ -1,0 +1,18 @@
+import numpy as np
+
+# Original array
+arr = np.array([1, 2, 3, 4, 5])
+print("Original array:", arr)
+
+
+view_arr = arr.view()
+view_arr[0] = 100  # change affects original
+print("After modifying view:")
+print("View array:", view_arr)
+print("Original array:", arr)  # original changed
+
+copy_arr = arr.copy()
+copy_arr[1] = 999  # change does NOT affect original
+print("After modifying copy:")
+print("Copy array:", copy_arr)
+print("Original array:", arr)  # original stays same
