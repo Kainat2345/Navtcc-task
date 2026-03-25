@@ -1,0 +1,22 @@
+import numpy as np
+
+# Original 1D array
+arr = np.array([1, 2, 3, 4, 5, 6])
+print("Original array:", arr)
+
+# Split into 3 parts
+split3 = np.array_split(arr, 3)
+print("\nSplit into 3 parts:")
+for i, part in enumerate(split3):
+    print(f" Part {i}:", part)
+
+# Split into 4 parts (uneven size possible)
+split4 = np.array_split(arr, 4)
+print("\nSplit into 4 parts:")
+for i, part in enumerate(split4):
+    print(f" Part {i}:", part)
+
+# Example: Access individual sub‑arrays
+print("\nAccessing sub‑arrays:")
+print(" First part:", split3[0])
+print(" Last part:", split3[-1])
