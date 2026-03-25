@@ -1,0 +1,25 @@
+import numpy as np
+
+print("=== NUMPY ARRAY SEARCH EXAMPLES ===")
+
+# 1) Find indexes where value == 4
+arr1 = np.array([1, 2, 3, 4, 5, 4, 4])
+idx_equal_4 = np.where(arr1 == 4)
+print("\nIndexes where value == 4:", idx_equal_4)
+
+# 2) Find indexes where numbers are even
+idx_even = np.where(arr1 % 2 == 0)
+print("Indexes where values are even:", idx_even)
+
+# 3) Using searchsorted() on a sorted array
+sorted_arr = np.array([1, 3, 5, 7, 9])
+insert_pos_7 = np.searchsorted(sorted_arr, 7)
+print("\nInsert position for 7 (left):", insert_pos_7)
+
+# Search from the right
+insert_pos_7_right = np.searchsorted(sorted_arr, 7, side='right')
+print("Insert position for 7 (right):", insert_pos_7_right)
+
+# 4) Search for multiple values
+positions = np.searchsorted(sorted_arr, [2, 4, 6])
+print("\nInsert positions for [2,4,6]:", positions)
