@@ -1,0 +1,34 @@
+import numpy as np
+
+
+# 1. Original array
+arr = np.array([[1, 2, 3],
+                [4, 5, 6]])
+print("Original array:\n", arr)
+print("Shape:", arr.shape)
+print()
+# 2. Reshape to 3x2
+reshaped = arr.reshape(3, 2)
+print("Reshaped
+ to 3x2:\n", reshaped)
+print("Shape:", reshaped.shape)
+print()
+
+# 3. Flatten and Ravel
+flat = arr.flatten()  # copy
+ravel = arr.ravel()   # view
+print("Flattened (copy):", flat)
+print("Ravel (view):", ravel)
+print()
+
+# 4. Resize (in-place)
+are_resized = arr.copy()
+arr_resized.resize((3, 3))  # extra elements filled with 0
+print("Resized to 3x3:\n", arr_resized)
+print()
+
+# 5. Transpose
+transposed = arr.T
+print("Transposed array:\n", transposed)
+print()
+
