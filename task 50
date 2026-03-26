@@ -1,0 +1,9 @@
+import numpy as np
+
+# Example dataset
+speed = [32, 111, 138, 28, 59, 77, 97]
+
+# Calculate standard deviation
+std_dev = np.std(speed)
+
+print("Standard Deviation:", std_dev)
