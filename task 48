@@ -1,0 +1,18 @@
+import pandas as pd
+
+# Create a simple dataset
+data = {
+    "Duration": [50, 40, 45, 60],
+    "Pulse": [109, 117, 110, 115],
+    "Maxpulse": [130, 145, 138, 140],
+    "Calories": [409, 479, 340, 420]
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Find correlation between columns
+correlation = df.corr()
+
+print("=== CORRELATION MATRIX ===")
+print(correlation)
