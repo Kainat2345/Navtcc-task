@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Create a simple dataset as a dictionary
+mydataset = {
+    'cars': ["BMW", "Volvo", "Ford"],
+    'passings': [3, 7, 2]
+}
+
+# Convert the dictionary into a DataFrame
+myvar = pd.DataFrame(mydataset)
+
+# Print the DataFrame
+print("Pandas DataFrame:\n", myvar)
+
+# Check and print the pandas version
+print("\nPandas version:", pd.__version__)
