@@ -1,0 +1,35 @@
+import pandas as pd
+
+print("=== PANDAS SERIES EXAMPLE ===\n")
+
+# 1. Create a Series from a simple list
+a = [1, 7, 2]
+series1 = pd.Series(a)
+print("Series from list:")
+print(series1)
+print()
+
+# Access by default index
+print("Value at index 0:", series1[0])
+print()
+
+# 2. Create Series with custom labels
+series2 = pd.Series(a, index=["x", "y", "z"])
+print("Series with custom index labels:")
+print(series2)
+print("Value with label 'y':", series2["y"])
+print()
+
+# 3. Create a Series from a dictionary
+calories = {"day1": 420, "day2": 380, "day3": 390}
+series3 = pd.Series(calories)
+print("Series from dictionary:")
+print(series3)
+print()
+
+# 4. Create Series using selected dictionary keys
+series4 = pd.Series(calories, index=["day1", "day2"])
+print("Series using only day1 and day2 from dictionary:")
+print(series4)
+
+print("\n=== END ===")
