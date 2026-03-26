@@ -1,0 +1,20 @@
+import pandas as pd
+
+# Load the CSV file into a DataFrame
+df = pd.read_csv("data.csv")
+
+print("=== FIRST 5 ROWS ===")
+print(df.head(), "\n")
+
+print("=== DATAFRAME INFO ===")
+print(df.info(), "\n")
+
+print("=== STATISTICS SUMMARY ===")
+print(df.describe(), "\n")
+
+print("=== SORTED BY FIRST COLUMN ===")
+first_col = df.columns[0]  # name of first column
+print(df.sort_values(by=first_col).head(), "\n")
+
+print("=== FILTERED ROWS (example) ===")
+print(df[df[first_col] > df[first_col].mean()])
