@@ -1,0 +1,19 @@
+import numpy as np
+from scipy import stats
+
+# Sample dataset
+speed = [32, 111, 138, 28, 59, 77, 97]
+
+# Mean (average)
+mean = np.mean(speed)
+
+# Median (middle value)
+median = np.median(speed)
+
+# Mode (most frequent value)
+mode = stats.mode(speed)
+
+print("=== RESULTS ===")
+print("Mean:", mean)
+print("Median:", median)
+print("Mode:", mode)
