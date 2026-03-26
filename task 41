@@ -1,0 +1,61 @@
+import pandas as pd
+
+print("===== PANDAS BASIC EXAMPLES =====\n")
+
+# 1) Creating a Series
+data_series = pd.Series([10, 20, 30, 40])
+print("1) Series:")
+print(data_series)
+print()
+
+# 2) Creating a DataFrame from a dictionary
+data_dict = {
+    'Name': ['Alice', 'Bob', 'Charlie'],
+    'Age': [25, 30, 35],
+    'City': ['New York', 'Los Angeles', 'Chicago']
+}
+df = pd.DataFrame(data_dict)
+print("2) DataFrame:")
+print(df)
+print()
+
+# 3) Accessing a column (returns a Series)
+print("3) Access column 'Age':")
+print(df['Age'])
+print()
+
+# 4) Accessing multiple columns
+print("4) Access columns 'Name' and 'City':")
+print(df[['Name', 'City']])
+print()
+
+# 5) Access row by index using iloc
+print("5) Access first row (index 0):")
+print(df.iloc[0])
+print()
+
+# 6) Access row by label using loc (here index is default 0,1,2)
+print("6) Access row where index = 1:")
+print(df.loc[1])
+print()
+
+# 7) Basic statistics
+print("7) Basic statistics on 'Age':")
+print(df['Age'].describe())
+print()
+
+# 8) Adding a new column
+df['Salary'] = [50000, 60000, 70000]
+print("8) DataFrame after adding 'Salary':")
+print(df)
+print()
+
+# 9) Filtering rows
+print("9) People with Age > 28:")
+print(df[df['Age'] > 28])
+print()
+
+# 10) Sorting DataFrame by Age
+print("10) DataFrame sorted by Age:")
+print(df.sort_values(by='Age'))
+print()
