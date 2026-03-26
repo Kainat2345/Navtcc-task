@@ -1,0 +1,25 @@
+import pandas as pd
+
+# Load dataset
+df = pd.read_csv("data.csv")
+
+print("=== ORIGINAL DATA ===")
+print(df.head(), "\n")
+
+# 1. Handle missing values (fill NaN)
+df["Calories"].fillna(df["Calories"].mean(), inplace=True)
+
+# 2. Fix wrong format (convert Date column to datetime)
+df["Date"] = pd.to_datetime(df["Date"], errors='coerce')
+
+# 3. Remove rows with empty Date values
+df.dropna(subset=["Date"], inplace=True)
+
+# 4. Fix wrong data (replace unrealistic values)
+df.loc[df["Duration"] > 120, "Duration"] = 120
+
+# 5. Remove duplicate rows
+df.drop_duplicates(inplace=True)
+
+print("=== CLEANED DATA ===")
+print(df.head())
